@@ -1,0 +1,88 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      body {
+        background-color: #333;
+        font-family: cursive;
+        color: white;
+        text-align:center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+        margin-top: 70px;
+        font-size: 7rem;
+      }
+
+      .options {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .choice {
+      font-size: 7rem;
+      border: 4px solid yellow;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+    }
+
+      .choice:hover {
+        transform: scale(1.5, 1.4);
+        background-color: whitesmoke;
+        border-color: black;
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 5rem;
+      }
+    
+      #start {
+        margin-top: 4rem;
+        font-size: 3.5rem;
+      }
+      #result {
+        font-size: 4rem;
+      }
+
+      @media screen and (max-width: 855px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <h1>Welcome to rock paper scissors</h1>
+    <div class="container">
+      <div class="options" id="rock"><span class="choice">👊</span></div>
+      <div class="options" id="paper"><span class="choice">✋</span></div>
+      <div class="options" id="scissors"><span class="choice">✌</span></div>
+    </div>
+    
+    <h1 id="start">Click any option to start!</h1>
+    <div class="info">
+      <h2 id="user"></h2>
+      <h2 id="computer"></h2>
+    </div>
+    <div class="result">
+      <h1 id="result"></h1>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>
