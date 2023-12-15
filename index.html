@@ -47,17 +47,23 @@
         display: flex;
         justify-content: center;
         gap: 5rem;
-        margin-top: 5rem;
+        margin-top: 3.3rem;
       }
     
       #start {
-        margin-top: 4rem;
+        margin-top: 3rem;
         font-size: 3.5rem;
       }
       #result {
-        font-size: 4rem;
+        font-size: 3.3rem;
       }
 
+      .score {
+        display: flex;
+        justify-content: center;
+        gap: 15rem;
+        font-size: 2rem;
+      }
       @media screen and (max-width: 855px) {
         .container {
           flex-direction: column;
@@ -80,8 +86,13 @@
       <h2 id="user"></h2>
       <h2 id="computer"></h2>
     </div>
-    <div class="result">
+    <div class="match-result">
       <h1 id="result"></h1>
+    </div>
+
+    <div class="score">
+      <div id="user-score">Your score: 0</div>
+      <div id="computer-score">Computer score: 0</div>
     </div>
     <script src="script.js"></script>
   </body>
