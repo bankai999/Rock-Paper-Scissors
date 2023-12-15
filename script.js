@@ -36,6 +36,9 @@ function getComputerChoice() {
     }
 }
 
+let userScore = 0;
+let computerScore = 0;
+
 function winner(user, comp) {
     user = user.toLowerCase();
     comp = comp.toLowerCase();
@@ -58,7 +61,7 @@ function play() {
     document.getElementById('start').innerText = '';
     document.getElementById('user').innerText = 'Your choice: ' + userChoice;
     document.getElementById('computer').innerText = "Computer's choice: " + computerChoice;
-    displayWinner(res);
+    displayWinner(res); 
     
     userChoice = '';
 }
@@ -67,9 +70,13 @@ function displayWinner(result) {
     document.getElementById('result').innerText = result;
     if(result=='Computer Wins!!') {
         document.getElementById('result').style.color = '#FF2400';
+        computerScore++;
+        document.getElementById('computer-score').innerHTML = 'Computer\'s score: ' + computerScore;
     }
     else if(result=='You Win!!') {
         document.getElementById('result').style.color = 'limegreen';
+        userScore++;
+        document.getElementById('user-score').innerHTML = 'Your score: ' + userScore;
     }
     else {
         document.getElementById('result').style.color = 'yellow';
